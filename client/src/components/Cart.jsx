@@ -38,7 +38,7 @@ const Cart = () => {
         }
         else{
           setAlert(false)
-          const stripe = await loadStripe("");
+          const stripe = await loadStripe("pk_test_51OpszFSB63zQKciP0t9jOn01V1UdEflESkoUP2gYkJ9zKP1iAspW0438ehb7ujxTybgXMCvmga99A6j8BP9iYS3200ySMi30H6");
          const response = await axios.post('http://localhost:3001/orders/order_payment' , {cart,user})
          
          const result =await stripe.redirectToCheckout({
